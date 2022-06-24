@@ -105,13 +105,13 @@ span.green{
 
 /* --- EXAMPLE: Reponsive Grid ---  */
 #show {
-  font-size: 16px;
+  font-size: 14px;
 }
-#show ol li {
-  padding: 3px 0;
+#show ol li, #show ul li  {
+  padding: 2px 0;
 }
-#show ol li:nth-child(even) {
-  color:#c6c6c6
+#show ol, #show ul{
+margin: 5px 0 10px 10px;
 }
 span.cyan {
   color: cyan;
