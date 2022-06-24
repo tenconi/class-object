@@ -1,0 +1,1 @@
+In this example, we create an "objet" with "class, we must declare them with their respective "constructor.

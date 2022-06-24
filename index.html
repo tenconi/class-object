@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="https://tenco.com.ar/favicon.png" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tenco: Object with constructor</title>
+    <meta name="author" content="tenco | Daniel Tenconi" />
+    <!-- ↓↓↓ CSS ↓↓↓ -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <!-- ↓↓↓ HTML ↓↓↓ -->
+  <body>
+    <div class="container">
+      <header>
+        <a href="https://tenco.com.ar/" target="_blank"><img src="https://tenco.com.ar/static/media/tenco_logo_light.7ce41bedf5039967ad9dd15ddc1e811d.svg"  alt="tenco" class="brand" /> <p><em>by Daniel Tenconi</em></p></a>
+        
+      </header>
+
+      <h2 class="title">Class Object with <em>Constructor</em> :</h2>
+        <p class="description">In this example, we create an "<em>objet</em>" with "<em>class</em>, we must declare them with their respective "<em>constructor</em>.</p>
+
+      <div class="result">
+
+        <div class="col" id="show">
+          <h3 class="result__title">Results:</h3>
+
+            <h4 id="namesito"><strong>name: </strong></h4>
+            <p id="skills"><strong>skills: </strong></p>
+            <p id="portfolio"><strong>portfolio: </strong></p>
+        <!-- show JS results -->
+        </div>
+
+        <div class="col" id="code">
+          <h3 class="result__title">Code:</h3>
+
+            <samp><code>
+              class <span class="cyan">Objet {</span><br>
+                <span class="magenta">constructor</span>(name, lastname) {<br>
+                  this.name = name;<br>
+                  this.lastname = lastname;<br>
+                  this.skills = [];<br>
+                  this.portfolio = [];<br>
+                }<br><br>
+              
+                getFullName() {<br>
+                  return `${this.name} ${this.lastname}`;
+                }<br><br>
+              
+                addSkills(String) {<br>
+                  this.skills.push(String);
+                }<br><br>
+                
+                addPortfolio(category, client) {<br>
+                  let work = {
+                    category: category,
+                    client: client,
+                  };<br><br>
+              
+                  this.portfolio.push(work);<br>
+                }<br><br>
+              
+                getClientsNames() {<br>
+                  return this.portfolio.map((x) => {
+                    return x.client;
+                  });<br>
+                }<br>
+              <span class="cyan">}</span>;
+              <br><br>
+              <span class="grey">// Create new objet</span><br>
+              let <span class="lime">Tenco</span> = new <span class="magenta">Objet</span> ('Daniel', 'Tenconi');
+              <br>         
+              <span class="grey">// Add skills in an Array</span><br>
+              Tenco.addSkills('html 5');<br>
+              Tenco.addSkills('css 3');<br>
+              Tenco.addSkills('javaScript');<br>
+              Tenco.addSkills('jQuery');<br>
+              Tenco.addSkills('react JS');<br>
+              <br>
+              <span class="grey">// Add objects as an Array</span><br>
+              Tenco.addPortfolio('Graphic Design', 'Fogones Aiken');<br>
+              Tenco.addPortfolio('Web Design', 'NewAgroCoin');<br>
+              Tenco.addPortfolio('Design & Layout', 'Priceless Cities');<br>
+              
+            </code></samp>
+        </div>
+      </div>
+    </div>
+
+    <!-- ↓↓↓ JavaScript ↓↓↓ -->
+    <script src="./app.js"></script>
+
+  </body>
+</html>
